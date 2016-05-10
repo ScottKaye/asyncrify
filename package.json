@@ -9,6 +9,9 @@
   "keywords": [
     "async", "thread", "worker", "service"
   ],
+  "files": [
+    "asyncrify.js", "asyncrify.worker.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ScottKaye/asyncrify.git"
