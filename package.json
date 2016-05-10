@@ -1,18 +1,21 @@
 {
   "name": "asyncrify",
   "version": "0.0.1",
-  "description": "",
+  "description": "Easily create threads for your front-end to do things on",
   "main": "asyncrify.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "async", "thread", "worker", "service"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ScottKaye/asyncrify.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Scott Kaye",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ScottKaye/asyncrify/issues"
   },
