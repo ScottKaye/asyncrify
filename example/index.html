@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Asyncrify Test</title>
+</head>
+<body>
+	
+	<script src="../asyncrify.js"></script>
+	<script>
+		let asyncrify = new Asyncrify();
+		asyncrify.require("something.js");
+		asyncrify.exec(() => {
+			let thing = new Something();
+			let result = thing.doThing();
+			
+			thing.doAsyncThing().then(stuff => {
+				// console calls are forwarded to the main thread
+				console.log("Got stuff asynchronously:", stuff);
+			});
+
+			return result;
+		}).then(data => {
+			console.log("Got data", data);
+		});
+
+		asyncrify.stopWhenDone(500).then(() => {
+			console.log("Shared worker stopped.");
+		});
+	</script>
+	
+</body>
+</html>
